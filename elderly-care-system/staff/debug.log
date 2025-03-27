@@ -1,0 +1,1139 @@
+
+=== 2025-03-27 20:40:19 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE WHEN m.sender_id = $1 THEN TRUE ELSE FALSE END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:42:08 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:42:10 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:42:10 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:42:41 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 86
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:42:45 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 1
+    [username] => admin
+    [role] => admin
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 86
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:46:03 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 13
+)
+
+
+=== 2025-03-27 20:46:04 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 13
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 86
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:48:25 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [user_id] => 11
+    [username] => admin
+    [role] => admin
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+)
+
+
+=== 2025-03-27 20:48:27 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [user_id] => 11
+    [username] => admin
+    [role] => admin
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:48:40 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [user_id] => 11
+    [username] => admin
+    [role] => admin
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 88
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:50:12 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [user_id] => 11
+    [username] => admin
+    [role] => admin
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+)
+
+
+=== 2025-03-27 20:50:15 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [user_id] => 11
+    [username] => admin
+    [role] => admin
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 88
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 89
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:50:36 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [user_id] => 11
+    [username] => admin
+    [role] => admin
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 88
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 89
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 90
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:52:04 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+    [user_id] => 11
+)
+
+
+=== 2025-03-27 20:52:06 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+    [user_id] => 11
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 88
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 89
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 90
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 91
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:53:26 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+    [user_id] => 11
+)
+
+
+=== 2025-03-27 20:53:31 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+    [user_id] => 11
+)
+
+
+=== 2025-03-27 20:53:32 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+    [user_id] => 11
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 88
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 89
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 90
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 91
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:53:43 ===
+Staff user_id: 11
+Staff staff_id: 3
+Session data: Array
+(
+    [staff_id] => 3
+    [staff_name] => Mr. Cleaner
+    [staff_role] => staff
+    [user_id] => 11
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 11
+Selected user ID: 1
+Message ID: 87
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 88
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 89
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 90
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 91
+Sender ID: 1
+Recipient ID: 11
+Is sender: true
+Message class: sent
+---
+Message ID: 92
+Sender ID: 11
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:54:42 ===
+Staff user_id: 14
+Staff staff_id: 5
+Session data: Array
+(
+    [staff_id] => 5
+    [staff_name] => Test Staff
+    [staff_role] => staff
+    [user_id] => 14
+)
+
+
+=== 2025-03-27 20:54:43 ===
+Staff user_id: 14
+Staff staff_id: 5
+Session data: Array
+(
+    [staff_id] => 5
+    [staff_name] => Test Staff
+    [staff_role] => staff
+    [user_id] => 14
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 14
+Selected user ID: 1
+Message ID: 93
+Sender ID: 1
+Recipient ID: 14
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:54:53 ===
+Staff user_id: 14
+Staff staff_id: 5
+Session data: Array
+(
+    [staff_id] => 5
+    [staff_name] => Test Staff
+    [staff_role] => staff
+    [user_id] => 14
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 14
+Selected user ID: 1
+Message ID: 93
+Sender ID: 1
+Recipient ID: 14
+Is sender: true
+Message class: sent
+---
+Message ID: 94
+Sender ID: 14
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:55:10 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 13
+)
+
+
+=== 2025-03-27 20:55:12 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 13
+)
+
+Messages query: SELECT m.*, 
+                             u.username as sender_name,
+                             u.role as sender_role,
+                             CASE 
+                                 WHEN m.sender_id = $1 THEN TRUE 
+                                 ELSE FALSE 
+                             END as is_sender,
+                             m.priority,
+                             m.category
+                      FROM messages m
+                      JOIN users u ON m.sender_id = u.user_id
+                      WHERE (m.sender_id = $1 AND m.recipient_id = $2)
+                         OR (m.sender_id = $2 AND m.recipient_id = $1)
+                      ORDER BY m.sent_at ASC
+User ID: 13
+Selected user ID: 1
+Message ID: 79
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 80
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 81
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 82
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 83
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+Message ID: 84
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 85
+Sender ID: 13
+Recipient ID: 1
+Is sender: true
+Message class: sent
+---
+Message ID: 86
+Sender ID: 1
+Recipient ID: 13
+Is sender: true
+Message class: sent
+---
+
+=== 2025-03-27 20:56:09 ===
+Staff user_id: 13
+Staff staff_id: 4
+Session data: Array
+(
+    [staff_id] => 4
+    [staff_name] => Flo Robes
+    [staff_role] => staff
+    [user_id] => 13
+)
+
