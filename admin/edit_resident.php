@@ -38,14 +38,19 @@ function validateResidentForm() {
     let today = new Date().toISOString().split('T')[0];
     let namePattern = /^[A-Za-z ]+$/;
     let errorMsg = "";
-    if (!namePattern.test(firstName)) {
-        errorMsg += "First name can only contain letters and spaces.\n";
+    
+    // Check if first name is empty or only spaces
+    if (firstName === "" || !namePattern.test(firstName)) {
+        errorMsg += "First name can only contain letters and spaces and cannot be empty.\n";
         valid = false;
     }
-    if (!namePattern.test(lastName)) {
-        errorMsg += "Last name can only contain letters and spaces.\n";
+    
+    // Check if last name is empty or only spaces
+    if (lastName === "" || !namePattern.test(lastName)) {
+        errorMsg += "Last name can only contain letters and spaces and cannot be empty.\n";
         valid = false;
     }
+    
     if (dob > today) {
         errorMsg += "Date of birth cannot be in the future.\n";
         valid = false;
@@ -83,11 +88,21 @@ function validateField(input) {
     const pattern = input.getAttribute('pattern');
     if (!pattern) return;
     const regex = new RegExp('^' + pattern + '$');
+    const trimmedValue = input.value.trim();
+    
     if (input.value === "") {
         input.classList.remove('is-invalid', 'is-valid');
         return;
     }
-    if (regex.test(input.value)) {
+    
+    // Check if the field contains only spaces
+    if (trimmedValue === "" && input.value !== "") {
+        input.classList.remove('is-valid');
+        input.classList.add('is-invalid');
+        return;
+    }
+    
+    if (regex.test(trimmedValue) && trimmedValue !== "") {
         input.classList.remove('is-invalid');
         input.classList.add('is-valid');
     } else {

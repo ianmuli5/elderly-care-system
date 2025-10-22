@@ -56,7 +56,8 @@ function handleFileUpload($file, $old_file = null) {
 }
 
 function validate_allergies($allergies) {
-    return preg_match("/^[A-Za-z \-']{2,30}$/", $allergies);
+    $trimmed = trim($allergies);
+    return !empty($trimmed) && preg_match("/^[A-Za-z \-']{2,30}$/", $trimmed);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

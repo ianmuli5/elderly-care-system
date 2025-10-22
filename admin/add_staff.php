@@ -264,10 +264,17 @@ function validateName(input) {
     const name = input.value.trim();
     const namePattern = /^[A-Za-z ]+$/;
     
+    // Check if the field contains only spaces
+    if (input.value !== "" && name === "") {
+        input.classList.add('is-invalid');
+        input.classList.remove('is-valid');
+        return;
+    }
+    
     if (namePattern.test(name) && name.length > 0) {
         input.classList.add('is-valid');
         input.classList.remove('is-invalid');
-    } else if (name.length > 0) {
+    } else if (input.value.length > 0) {
         input.classList.add('is-invalid');
         input.classList.remove('is-valid');
     } else {
@@ -345,12 +352,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validate names
         const namePattern = /^[A-Za-z ]+$/;
-        if (!namePattern.test(firstName)) {
-            alert('First name can only contain letters and spaces.');
+        if (firstName === "" || !namePattern.test(firstName)) {
+            alert('First name can only contain letters and spaces and cannot be empty.');
             hasErrors = true;
         }
-        if (!namePattern.test(lastName)) {
-            alert('Last name can only contain letters and spaces.');
+        if (lastName === "" || !namePattern.test(lastName)) {
+            alert('Last name can only contain letters and spaces and cannot be empty.');
             hasErrors = true;
         }
         

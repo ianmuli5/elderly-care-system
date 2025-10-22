@@ -20,7 +20,8 @@ $caregiver_result = pg_query($db_connection, $caregiver_query);
 
 // Server-side validation helper
 function validate_name($name) {
-    return preg_match('/^[A-Za-z ]+$/', $name);
+    $trimmed = trim($name);
+    return !empty($trimmed) && preg_match('/^[A-Za-z ]+$/', $trimmed);
 }
 
 function validate_dob($dob) {
@@ -35,10 +36,12 @@ function validate_passport_number($num) {
     return preg_match('/^[A-Z]{1}\d{7,9}$/', $num);
 }
 function validate_place_name($name) {
-    return preg_match("/^[A-Za-z \-']+$/", $name);
+    $trimmed = trim($name);
+    return !empty($trimmed) && preg_match("/^[A-Za-z \-']+$/", $trimmed);
 }
 function validate_allergies($allergies) {
-    return preg_match("/^[A-Za-z \-']{2,30}$/", $allergies);
+    $trimmed = trim($allergies);
+    return !empty($trimmed) && preg_match("/^[A-Za-z \-']{2,30}$/", $trimmed);
 }
 function validate_medical_insurance($val) {
     return preg_match('/^(?=.*[A-Za-z])(?=.*[0-9]).{5,45}$/', $val);
@@ -47,13 +50,16 @@ function validate_contact($contact) {
     return preg_match('/^[+]?\d{10,15}$/', $contact);
 }
 function validate_children_info($info) {
-    return preg_match("/^[A-Za-z0-9 ,\-']+$/", $info);
+    $trimmed = trim($info);
+    return !empty($trimmed) && preg_match("/^[A-Za-z0-9 ,\-']+$/", $trimmed);
 }
 function validate_letters_only($val) {
-    return preg_match("/^[A-Za-z \-']+$/", $val);
+    $trimmed = trim($val);
+    return !empty($trimmed) && preg_match("/^[A-Za-z \-']+$/", $trimmed);
 }
 function validate_interests($val) {
-    return preg_match("/^[A-Za-z ,]+$/", $val);
+    $trimmed = trim($val);
+    return !empty($trimmed) && preg_match("/^[A-Za-z ,]+$/", $trimmed);
 }
 
 $error_msgs = [];
@@ -223,14 +229,19 @@ function validateResidentForm() {
     let today = new Date().toISOString().split('T')[0];
     let namePattern = /^[A-Za-z ]+$/;
     let errorMsg = "";
-    if (!namePattern.test(firstName)) {
-        errorMsg += "First name can only contain letters and spaces.\n";
+    
+    // Check if first name is empty or only spaces
+    if (firstName === "" || !namePattern.test(firstName)) {
+        errorMsg += "First name can only contain letters and spaces and cannot be empty.\n";
         valid = false;
     }
-    if (!namePattern.test(lastName)) {
-        errorMsg += "Last name can only contain letters and spaces.\n";
+    
+    // Check if last name is empty or only spaces
+    if (lastName === "" || !namePattern.test(lastName)) {
+        errorMsg += "Last name can only contain letters and spaces and cannot be empty.\n";
         valid = false;
     }
+    
     if (dob > today) {
         errorMsg += "Date of birth cannot be in the future.\n";
         valid = false;
@@ -268,11 +279,21 @@ function validateField(input) {
     const pattern = input.getAttribute('pattern');
     if (!pattern) return;
     const regex = new RegExp('^' + pattern + '$');
+    const trimmedValue = input.value.trim();
+    
     if (input.value === "") {
         input.classList.remove('is-invalid', 'is-valid');
         return;
     }
-    if (regex.test(input.value)) {
+    
+    // Check if the field contains only spaces
+    if (trimmedValue === "" && input.value !== "") {
+        input.classList.remove('is-valid');
+        input.classList.add('is-invalid');
+        return;
+    }
+    
+    if (regex.test(trimmedValue) && trimmedValue !== "") {
         input.classList.remove('is-invalid');
         input.classList.add('is-valid');
     } else {

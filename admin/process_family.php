@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: residents.php');
         exit;
     }
-    if (!preg_match('/^[A-Za-z ]+$/', $username)) {
-        $_SESSION['error'] = 'Username can only contain letters and spaces.';
+    if (empty($username) || !preg_match('/^[A-Za-z ]+$/', $username)) {
+        $_SESSION['error'] = 'Username can only contain letters and spaces and cannot be empty.';
         header('Location: residents.php');
         exit;
     }
